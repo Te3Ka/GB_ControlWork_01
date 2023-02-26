@@ -21,6 +21,18 @@ void Author()
     Console.WriteLine();
 }
 
+// Метод для ввода массива строк от пользователя
+string[] UserInputArray(int num)
+{
+    string[] array = new string[num];
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"Введите строку №{i}: ");
+        array[i] = Console.ReadLine()!;
+    }
+    return array;
+}
+
 Console.WriteLine("Программа запрашивает от пользователя массив строк.\n"
                 + "Выводит все строки состоящие из 3 и меньше символов в новый массив.");
 Console.WriteLine("Сколько будет строк в изначальном массиве?");
@@ -31,3 +43,4 @@ while (num <= 0)
     Console.WriteLine("Число меньше 1! Невозможно создать массив. Введите заново: ");
     int.TryParse(Console.ReadLine(), out num);
 }
+string[] userArray = UserInputArray(num);
