@@ -33,6 +33,28 @@ string[] UserInputArray(int num)
     return array;
 }
 
+// Метод для создания нового массива из 3 и меньше символов
+string[] ThreeCharArray(string[] userArray)
+{
+    int count = 0;
+    for (int i = 0; i < userArray.Length; i++)
+    {
+        if (userArray[i].Length <= 3)
+            count++;
+    }
+    string[] finishArray = new string[count];
+    count = 0;
+    for (int i = 0; i < userArray.Length; i++)
+    {
+        if (userArray[i].Length <= 3)
+        {
+            finishArray[count] = userArray[i];
+            count++;
+        }
+    }    
+    return finishArray;
+}
+
 Console.WriteLine("Программа запрашивает от пользователя массив строк.\n"
                 + "Выводит все строки состоящие из 3 и меньше символов в новый массив.");
 Console.WriteLine("Сколько будет строк в изначальном массиве?");
@@ -44,3 +66,4 @@ while (num <= 0)
     int.TryParse(Console.ReadLine(), out num);
 }
 string[] userArray = UserInputArray(num);
+string[] threeCharArray = ThreeCharArray(userArray);
