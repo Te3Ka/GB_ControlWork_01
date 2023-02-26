@@ -20,6 +20,7 @@ void Author()
     Console.WriteLine("E-mail: Mnement4813@yandex.ru");
     Console.WriteLine();
 }
+
 // Метод для ввода массива строк от пользователя
 string[] UserInputArray(int num)
 {
