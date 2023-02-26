@@ -20,3 +20,19 @@ void Author()
     Console.WriteLine("E-mail: Mnement4813@yandex.ru");
     Console.WriteLine();
 }
+
+void PrintArray(string[] printArr)
+{
+    Console.Write("[");
+    for (int i = 0; i < printArr.Length; i++)
+    {
+        if (i == printArr.Length - 1)
+            Console.Write($"\"{printArr[i]}\"");
+        else
+            Console.Write($"\"{printArr[i]}\", ");
+    }
+    Console.Write("]");
+}
+
+string[] testArray = { "hello", "2", "world", ":-)" };
+PrintArray(testArray);
