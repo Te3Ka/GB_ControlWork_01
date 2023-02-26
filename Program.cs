@@ -20,7 +20,6 @@ void Author()
     Console.WriteLine("E-mail: Mnement4813@yandex.ru");
     Console.WriteLine();
 }
-
 // Метод для ввода массива строк от пользователя
 string[] UserInputArray(int num)
 {
@@ -55,6 +54,20 @@ string[] ThreeCharArray(string[] userArray)
     return finishArray;
 }
 
+// Метод печати массива строк в консоль
+void PrintArray(string[] printArr)
+{
+    Console.Write("[");
+    for (int i = 0; i < printArr.Length; i++)
+    {
+        if (i == printArr.Length - 1)
+            Console.Write($"\"{printArr[i]}\"");
+        else
+            Console.Write($"\"{printArr[i]}\", ");
+    }
+    Console.Write("]");
+}
+
 Console.WriteLine("Программа запрашивает от пользователя массив строк.\n"
                 + "Выводит все строки состоящие из 3 и меньше символов в новый массив.");
 Console.WriteLine("Сколько будет строк в изначальном массиве?");
@@ -67,3 +80,4 @@ while (num <= 0)
 }
 string[] userArray = UserInputArray(num);
 string[] threeCharArray = ThreeCharArray(userArray);
+PrintArray(threeCharArray);
