@@ -65,7 +65,7 @@ void PrintArray(string[] printArr)
         else
             Console.Write($"\"{printArr[i]}\", ");
     }
-    Console.Write("]");
+    Console.WriteLine("]");
 }
 
 Console.WriteLine("Программа запрашивает от пользователя массив строк.\n"
@@ -80,4 +80,9 @@ while (num <= 0)
 }
 string[] userArray = UserInputArray(num);
 string[] threeCharArray = ThreeCharArray(userArray);
+Console.WriteLine("Изначальный массив:");
+PrintArray(userArray);
+Console.WriteLine("Полученный массив:");
 PrintArray(threeCharArray);
+
+Author();
