@@ -20,3 +20,14 @@ void Author()
     Console.WriteLine("E-mail: Mnement4813@yandex.ru");
     Console.WriteLine();
 }
+
+Console.WriteLine("Программа запрашивает от пользователя массив строк.\n"
+                + "Выводит все строки состоящие из 3 и меньше символов в новый массив.");
+Console.WriteLine("Сколько будет строк в изначальном массиве?");
+Console.Write(">>: ");
+int.TryParse(Console.ReadLine(), out int num);
+while (num <= 0)
+{
+    Console.WriteLine("Число меньше 1! Невозможно создать массив. Введите заново: ");
+    int.TryParse(Console.ReadLine(), out num);
+}
